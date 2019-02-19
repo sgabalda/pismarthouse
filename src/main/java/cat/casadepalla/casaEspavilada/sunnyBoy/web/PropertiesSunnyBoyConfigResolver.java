@@ -93,14 +93,22 @@ public class PropertiesSunnyBoyConfigResolver
         if(null == type){
             logger.log(Level.WARNING,"Data type code for code {0} not configured in properties file",code);
             return null;
-        }else switch (type) {
-            case "double":
-                return new Scalar<>(Double.parseDouble(value));
-            case "int":
-                return new Scalar<>(Integer.parseInt(value));
-            default:
-                logger.log(Level.WARNING,"Data type {0}  for code {1} is not known",new Object[]{type,code});
+        }else {
+            try{
+                switch (type) {
+
+                    case "double":
+                        return new Scalar<>(Double.parseDouble(value));
+                    case "int":
+                        return new Scalar<>(Integer.parseInt(value));
+                    default:
+                        logger.log(Level.WARNING,"Data type {0}  for code {1} is not known",new Object[]{type,code});
+                        return null;
+                }
+            }catch(NumberFormatException e){
+                logger.log(Level.SEVERE,"Data type {0}  for code {1} is not thre right type: {2}",new Object[]{type,code,e});
                 return null;
+            }
         }
     }
 

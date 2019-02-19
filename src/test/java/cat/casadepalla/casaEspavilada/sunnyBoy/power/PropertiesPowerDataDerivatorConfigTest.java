@@ -6,7 +6,6 @@
 package cat.casadepalla.casaEspavilada.sunnyBoy.power;
 
 import cat.casadepalla.casaEspavilada.core.magnitudes.Unit;
-import cat.casadepalla.casaEspavilada.sunnyBoy.web.PropertiesSunnyBoyConfigResolver;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;

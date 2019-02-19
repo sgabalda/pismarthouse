@@ -5,15 +5,11 @@
  */
 package cat.casadepalla.casaEspavilada.sunnyBoy.web;
 
-import cat.casadepalla.casaEspavilada.sunnyBoy.web.GenericSunnyBoyDataAdapter;
 import cat.casadepalla.casaEspavilada.core.Measure;
 import cat.casadepalla.casaEspavilada.core.Measurements;
 import cat.casadepalla.casaEspavilada.core.magnitudes.Magnitude;
 import cat.casadepalla.casaEspavilada.core.magnitudes.Scalar;
 import cat.casadepalla.casaEspavilada.core.magnitudes.Unit;
-import cat.casadepalla.casaEspavilada.sunnyBoy.web.SunnyBoyAdapterException;
-import cat.casadepalla.casaEspavilada.sunnyBoy.web.SunnyBoyConfigResolver;
-import cat.casadepalla.casaEspavilada.sunnyBoy.web.SunnyBoyDataDerivator;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -23,11 +19,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 import static org.mockito.ArgumentMatchers.any;
-import org.mockito.Mock;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import org.mockito.internal.matchers.Any;
 
 /**
  *
